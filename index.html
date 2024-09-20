@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GONNA CATCH 'EM ALL</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pokedex-container {
+            background-image: url('663-6639628_pokedex-png-removebg-preview.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 700px; 
+            height: 1000px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px; 
+        }
+
+        .screen {
+            width: 250px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #pokemon-image {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-right: 320px;
+            bottom: 20px;                          
+        }
+
+        #pokemon-name {
+            position: relative;
+            font-size: 15px;
+            text-shadow:
+            -2px -1px 0 rgb(7, 0, 0), 
+            2px -1px 0 rgb(7, 0, 0),  
+            -1px 2px 0 rgb(7, 0, 0),  
+            2px 2px 0 rgb(7, 0, 0);
+            right: 200px;
+            top: 60px; 
+            color:white
+        }
+
+        #pokemon-type {
+            position: relative;
+            bottom: 220px;
+            left: 190px; 
+            color: white;
+            font-size: 14px;
+            text-shadow:
+            -5px -5px 0 rgb(7, 0, 0), 
+            5px -5px 0 rgb(7, 0, 0),  
+            -5px 5px 0 rgb(7, 0, 0),  
+            5px 5px 0 rgb(7, 0, 0);                                                                                                                                    
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 50px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            display: flex;
+            gap: 10px;
+        }
+
+        #prev-btn {
+            position: absolute; 
+            bottom: 357px; 
+            left: 61px; 
+            width: 60px;
+        }
+        
+
+
+        #next-btn {
+            position: absolute; 
+            bottom: 357px; 
+            left: 121px; 
+            width: 60px;
+        }
+
+        #pokemon-id-input {
+            position: absolute; 
+            bottom: 340px; 
+            left: 215px; 
+            transform: translateX(-50%); 
+            width: 30px;
+
+        }
+
+        #search-btn {
+            position: absolute; 
+            bottom: 340px; 
+            left: 250px; 
+            border-radius: 50%; 
+            width: 52px; 
+            height: 52px; 
+            background-color: #f50606; 
+            color: white; 
+            font-size: 20px; 
+            cursor: pointer; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s; 
+}
+
+        #search-btn:hover {
+            background-color: #0056b3; 
+}
+        
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pokedex-container">
+        <div class="screen">
+            <img id="pokemon-image" src="" alt="Pokémon Image">
+            <p id="pokemon-name"></p>
+            <p id="pokemon-type"></p>
+        </div>
+
+        <div class="buttons">
+            <button id="prev-btn">⬅</button>
+            <input type="number" id="pokemon-id-input" placeholder="ID">
+            <button id="search-btn">●</button>
+            <button id="next-btn">⮕</button>
+        </div>
+    </div>
+
+    <script src="ash_fraco.js"></script>
+
+</body>
+</html>
